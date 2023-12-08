@@ -4,11 +4,11 @@ const questions = [
     { questionText: 'React is a Java framework', answerOptions: ['True', 'False'], correctAnswer: 'False'},
     { questionText: 'Which of the following is an aspect of Agile Development?', answerOptions: ['Scrums', 'Refractor'], correctAnswer: 'Scrums'},
     { questionText: 'What is the first step of TDD (Test-Driven Development)', answerOptions: ['Green', 'Red'], correctAnswer: 'Red'},
-    { questionText: 'How many object instances does a singleton pattern handle?', answerOptions: ['One', 'Three', 'No Limit'], correctAnswer: 'One'},
+    { questionText: 'How many object instances does a singleton pattern handle?', answerOptions: ['One', 'Three'], correctAnswer: 'One'},
     { questionText: 'Which of the following does Hungarian Notation organize?', answerOptions: ['Variable Names', 'Integers'], correctAnswer: 'Variable Names'},
     { questionText: 'The unitended expansion of your original plan would be called a ____', answerOptions: ['Feature Creep', 'Scope Creep'], correctAnswer: 'Scope Creep'},
     { questionText: 'Microservices are monolithic', answerOptions: ['True', 'False'], correctAnswer: 'False'},
-    { questionText: 'Which of the following is a benefit of using the Cloud?', answerOptions: ['Cost', 'Start-up time', 'Distributed development', 'All of the above'], correctAnswer: 'All of the above'},
+    { questionText: 'Which of the following is a benefit of using the Cloud?', answerOptions: ['Tight coupling', 'Start-up time'], correctAnswer: 'Start-up time'},
     
   ];
   
