@@ -3,32 +3,29 @@ import Question from './Question';
 import Score from './Score';
 import questions from './data/questions.js';
 
-const Quiz = ({ userName, updateScoreHistory, scoreHistory, onReturnHome }) => {
+const Quiz = ({ userName, onReturnHome }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
 
   const handleAnswerSelected = (answer) => {
-    let updatedScore = score;
-    if (answer === questions[currentQuestion].correctAnswer) { //accesses current question to check if the user got the answer right
-      updatedScore += 1;
+    if (answer === questions[currentQuestion].correctAnswer) {
+      setScore(prevScore => prevScore + 1);
     }
 
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < questions.length) {
-      setCurrentQuestion(nextQuestion); //moving to the next question
-      setScore(updatedScore);
+      setCurrentQuestion(nextQuestion);
     } else {
-      setShowScore(true); //show score and score history
-      updateScoreHistory(userName, updatedScore);
+      setShowScore(true);
     }
   };
-  
+
   return (
     <div>
       {showScore ? (
         <div>
-          <Score score={score} totalQuestions={questions.length} userName={userName} scoreHistory={scoreHistory} />
+          <Score score={score} totalQuestions={questions.length} userName={userName} />
           <button onClick={onReturnHome}>Return to Home</button>
         </div>
       ) : (
