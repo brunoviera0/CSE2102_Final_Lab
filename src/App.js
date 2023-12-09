@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Routes> {/* Use Routes instead of Switch */}
+        <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/quiz" element={<Quiz />} />
         </Routes>
